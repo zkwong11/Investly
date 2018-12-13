@@ -1,0 +1,42 @@
+:root {
+    --color-main-0: #2BC0E4;
+    --color-main-1: #EAECC6;
+
+    --shadow-dark: 0 .5rem 1rem rgba(0,0,0,.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    // font-family: 'Open Sans', sans-serif;
+    font-family: 'Cardo', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    min-height: 90vh;
+ }
+
+//  .container {
+//     display: flex;
+
+//     margin: 8rem auto;
+//     max-width: 120rem;
+//     min-height: 80rem;
+
+//     background-color: #fff;
+//     box-shadow: var(--shadow-dark);
+//  }

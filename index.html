@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="shortcut icon" href="#">
+
+    <title>Investly</title>
+</head>
+<body>
+    <!-- NAVGIATION -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">INVESTLY</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active pl-2">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item pl-2">
+                    <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item pl-2">
+                    <a class="nav-link" href="#">Cryptocurrency</a>
+                </li>
+                <li class="nav-item pl-2">
+                    <a class="nav-link" href="#">Statistics</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- TOP SECTION -->
+    <div class="container-fluid mb-5">
+        <div class="jumbotron pt-1 pb-1 text-center">
+            <h1>Investly</h1>
+            <h2>U.S. Stock Market & the Latest Business News</h2>
+        </div>
+        <div class="summary-info text-center text-muted mb-5">
+            Stock information and current news for the United States Stock Market. Additional functionality coming soon.
+        </div>
+        
+        <!-- NEWS SECTION -->
+        <h3 class="news-header text-left">The Lastest News in Business</h3>
+        <div class="news-section mt-0">
+            <!-- insert news items -->
+        </div>
+    </div>
+
+    <!-- IPO CALENDAR -->
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+                <div id="accordion" role="tablist">
+                    <div class="card">
+                      <div class="card-header" role="tab" id="headingOne">
+                        <h5 class="mb-0">
+                          <a class="ipo-header" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Upcoming IPOs
+                          </a>
+                        </h5>
+                      </div>
+                  
+                      <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="card-body cb1">
+                            <!-- INSERT CARD BODY 1 -->
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div id="accordion" role="tablist">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingTwo">
+                          <h5 class="mb-0">
+                            <a class="ipo-header collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              IPOs Today
+                            </a>
+                          </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse show" role="tabpanel" aria-labelledby="headingTwo">
+                          <div class="card-body cb2">
+                              <!-- INSERT CARD BODY 2 -->
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTROL SETTINGS -->
+    <div class="container mb-5">
+        <div class="search-box text-right">
+            <input type="text" class="search-input" placeholder="Search symbol...">
+            <button class="btn btn-outline-secondary search-btn" type="button">Search</button>
+        </div>
+        <!-- <div class="settings-panel">
+            <div class="panel panel-1" onclick="getAxiosRequest()">Top 10</div>
+            <div class="panel panel-2" onclick="getAxiosRequest2()">Bottom 10</div>
+            <div class="panel panel-3" onclick="getAxiosRequest3()">Top Volume</div>
+            <div class="panel panel-4" onclick="getAxiosRequest4()">Top % Change</div>
+        </div>     -->
+    </div>
+    
+    <!-- DATE TIME -->
+    <div class="container text-right">
+        <p class="date-time">hi</p>
+    </div>
+
+    <!-- TABLE -->
+    <div class="container">
+        <table class="table table-striped table-light">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Close</th>
+                    <th scope="col">Change</th>
+                    <th scope="col">% Change</th>
+                    <th scope="col">Volume</th>
+                    <th scope="col">52 Week Low</th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+                <!-- insert data rows -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- SECTORS SECTION -->
+    <div class="sector-list container">
+        <h2 class="text-left">Sector Overview:</h2>
+        <!-- insert sector items -->
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer bottom mt-5 pb-2">
+        <hr>
+        <div class="container pb-2">
+            <div class="text-muted text-center">&copy; 2018 Investly. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
